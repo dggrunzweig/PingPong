@@ -7,17 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import <SCAPI.h>
+
 
 @interface AppDelegate ()
 
 @end
+
+
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    return YES;
+    [SCSoundCloud setClientID:@"282e212797289f9bd89a4b581b5a31d6"
+                       secret:@"22fc99ed9cd96a85306052fa27934836"
+                  redirectURL:[NSURL URLWithString:@"pingpong://oauth"]];
+
+       return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

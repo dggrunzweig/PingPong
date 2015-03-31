@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController <UITextFieldDelegate>
+
+@property IBOutlet UITextField* location;
+@property IBOutlet UIScrollView* scrollView;
+@property UITextField* activeField;
+@property NSDictionary* meData;
+@property BOOL loggedOn;
+
+-(IBAction)login:(id)sender;
+-(IBAction)updateLocation:(id)sender;
 
 @end
